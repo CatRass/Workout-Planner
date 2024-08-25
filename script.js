@@ -92,6 +92,7 @@ function addNewRow(table){
     var td = document.createElement('td');
     var input = document.createElement('input');
     input.className = "table-text"
+    input.placeholder = "Enter excercise name"
     input.type = 'text';
 
     td.appendChild(input)
@@ -107,6 +108,12 @@ function addNewRow(table){
     input.min = 0;
 
     td.appendChild(input)
+
+    var input = document.createElement('label');
+    input.textContent = "kg";
+
+    td.appendChild(input)
+
     row.appendChild(td);
 
     // ======= Rep Range =======
