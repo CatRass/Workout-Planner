@@ -1,0 +1,127 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background: rgb(203, 208, 255);
+}
+
+button {
+    padding: 5px;
+    border-radius: 15px;
+    margin: 5px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: rgb(154, 211, 254);
+    color: white
+}
+
+.excer-button{
+    background-color: rgb(255, 255, 255);
+    border-color: aqua;
+}
+
+.big-button{
+    background-color: rgb(189, 189, 189);
+}
+
+.delete-button {
+    margin-left:35%;
+    color:rgb(93, 2, 2);
+    border-color: white;
+    background-color: rgb(255, 93, 93);
+    padding-inline: 10px;
+    align-self: right;
+}
+
+.delete-button:hover{
+    background-color: rgb(255, 164, 164);
+}
+
+.workout-container {
+    width: 55%;
+    border:2px solid black;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #9fb0ff;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes the gap between borders */
+    margin: 20px 0; /* Adds space around the table */
+    font-family: Arial, sans-serif; /* Sets a basic font */
+    font-size: 16px; /* Sets the font size */
+  }
+  
+  /* Table Header Styles */
+  th {
+    background-color: #4c60af; /* Header background color */
+    color: white; /* Header text color */
+    padding: 12px; /* Padding inside each header cell */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #ddd; /* Border below the header */
+  }
+  
+  /* Table Data Cell Styles */
+  td {
+    padding: 12px; /* Padding inside each cell */
+    border-bottom: 1px solid #ddd; /* Bottom border for each cell */
+    text-align: left; /* Align text to the left */
+    background-color: #ddd;
+  }
+  
+  /* Alternating Row Colors */
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray color for even rows */
+  }
+
+  
+  /* Responsive Table */
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block; /* Makes table rows block elements on small screens */
+    }
+  
+    /* Hide table headers visually on smaller screens */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    tr {
+      margin: 0 0 1rem 0; /* Adds spacing between rows */
+    }
+  
+    td {
+      border: none; /* Removes borders */
+      position: relative;
+      padding-left: 50%; /* Creates space on the left for pseudo-elements */
+    }
+  
+    td::before {
+      content: attr(data-label); /* Adds data-label before each cell's content */
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px; /* Padding for the pseudo-element */
+      font-weight: bold; /* Bold text for pseudo-elements */
+      text-align: left; /* Align text to the left */
+    }
+  }
+  
+
+.table-text{
+    border: none;
+    font-size: 16px;
+}
+
+#weight-text {
+    width: 50%;
+}
+
+#rep-text {
+    width:15%;
+}
