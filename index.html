@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Program</title>
+    <title>Program Planner</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>Program Planner</h1>
-    <p>Plan your weekly program</p>
+    <header class="main-header">
+        <h1 class="header-text">Workout Program Planner</h1>
+        <p class="header-text">A program refers to a schedule that prescribes workout routines for people.
+            This websites helps track the excercises, weight, repetition amount and set amount
+        </p>
+    </header>
 
-    <div id="workouts_container"></div> 
-    
-    <button onclick="createEmptyTable()" class="big-button">Add Workout</button>
+    <content>
+        <div id="workouts_container"></div> 
+        
+        <button onclick="createEmptyTable()" class="big-button">Add Workout</button>
+    </content>
 </body>
 </html>

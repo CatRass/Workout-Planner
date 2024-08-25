@@ -39,8 +39,9 @@ function createEmptyTable() {
     title.textContent = days[currentDay] + ":";
     currentDay++;
 
-    var name = document.createElement('h3');
-    name.textContent = "Click to Edit Name";
+    var name = document.createElement('input');
+    name.placeholder = "Click to Edit Name. E.g: Chest Day";
+    name.className = "editable"
     name.contentEditable = "true";
     name.onfocus = function() {document.createRange().selectNodeContents(this)}
 

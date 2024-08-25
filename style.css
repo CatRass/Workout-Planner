@@ -1,7 +1,37 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
 body {
     font-family:Arial, Helvetica, sans-serif;
     background: rgb(203, 208, 255);
 }
+
+content {
+  margin: 25%;
+}
+
+.main-header{
+  text-align: center;
+  background-color: #4c60af;
+  background-size: cover ;
+  color: white;
+  margin: 0;
+}
+
+.main-header h1{
+  margin: 0;
+  padding:1%;
+  font-size: 4em;
+}
+
+.main-header p{
+  margin: 0;
+  padding:1%;
+  font-size: 1em;
+}
+
 
 button {
     padding: 5px;
@@ -18,7 +48,7 @@ button:hover{
 
 .excer-button{
     background-color: rgb(255, 255, 255);
-    border-color: aqua;
+    border-color: rgb(0, 204, 255);
 }
 
 .big-button{
@@ -39,11 +69,21 @@ button:hover{
 }
 
 .workout-container {
-    width: 55%;
-    border:2px solid black;
+    width: 97%;
+    border:2px solid rgb(65, 76, 179);
     padding:10px;
+    margin:10px;
     border-radius: 10px;
-    background-color: #9fb0ff;
+    background-color: #9aacfc;
+}
+
+input.editable {
+  background-color: #b6c3ff;
+  width: 50%;
+  font-size: large;
+  border-radius: 15px;
+  padding-inline-start:5px;
+  padding:1px;
 }
 
 /* Table Styles */
@@ -67,9 +107,9 @@ table {
   /* Table Data Cell Styles */
   td {
     padding: 12px; /* Padding inside each cell */
-    border-bottom: 1px solid #ddd; /* Bottom border for each cell */
+    /*border-bottom: 1px solid #ddd;  Bottom border for each cell */
     text-align: left; /* Align text to the left */
-    background-color: #ddd;
+    background-color: #97a2cc;
   }
   
   /* Alternating Row Colors */
