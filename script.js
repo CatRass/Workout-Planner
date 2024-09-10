@@ -21,6 +21,11 @@ class excercise{
 newestID = 0;
 currentDay = 0;
 
+// Function for saving data to localstorage
+function saveData(currDay) {
+    localStorage.setItem(`workout-${days[currDay-1]}`, null)
+}
+
 function createEmptyTable() {
     if(currentDay >= days.length){
         alert("Max number of workouts reached")
@@ -72,20 +77,31 @@ function createEmptyTable() {
 
     container.appendChild(table);
 
-    // Craete the exercise button
+    // Create the exercise button
+    let numRows = 0;
     let addRow = document.createElement('button');
-    addRow.onclick = function(){ addNewRow(table) }
+    addRow.onclick = function(){ addNewRow(table,currentDay-1,numRows); numRows++ }
     addRow.textContent = 'Add New Excercise';
     addRow.className = 'excer-button'
 
+    // Save Button
+    var svButton = document.createElement('button');
+    svButton.onclick = function() { saveData(currentDay) }
+    svButton.textContent = "💾";
+    svButton.className = 'save-button'
+
     container.appendChild(addRow)
+    container.appendChild(svButton)
 
     // Append the new table to the container
     document.getElementById('workouts_container').appendChild(container);
 }
 
-function addNewRow(table){
+function addNewRow(table,day,numRows){
     var tbody = document.createElement('tbody');
+    // Format is:
+    // table-day-row number
+    tbody.id = `table-${day}-${numRows}`
     var row = document.createElement('tr');
     
     // ======= Excercise Name =======
